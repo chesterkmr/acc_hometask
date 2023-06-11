@@ -1,0 +1,14 @@
+.users {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.main {
+  flex-basis: 70%;
+}
+
+.addUser {
+  flex-basis: 30%;
+}

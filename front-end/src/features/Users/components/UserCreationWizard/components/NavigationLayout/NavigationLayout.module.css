@@ -1,0 +1,18 @@
+.navigationLayout {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.navigationLayout > div {
+  flex: 1;
+}
+
+.loader {
+  text-align: center;
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+}

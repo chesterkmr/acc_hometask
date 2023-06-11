@@ -1,0 +1,30 @@
+version: '3'
+services:
+  mongodb:
+    image: mongo
+    container_name: acc_hometask_db
+    ports:
+      - 27017:27017
+    volumes:
+      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    environment:
+      MONGO_INITDB_DATABASE: testdb
+      MONGO_INITDB_AUTH_DATABASE: testdb
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: password
+
+  api:
+    build:
+      context: ./back-end
+    ports:
+      - 8080:8080
+    restart: always
+
+  frontend:
+    build:
+      context: ./front-end
+    ports:
+      - 4000:4000
+    depends_on:
+      - api
+
