@@ -1,7 +1,11 @@
 # How to start
 
 Open terminal and hit `docker compose up`
+
+
 Default backend url: `http://localhost:8080`
+
+
 Default frontend url `http://localhost:4000`
 
 ## Endpoints
